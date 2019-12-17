@@ -1,6 +1,6 @@
 require 'json'
 
-serialized_input = File.read('../public/leagues.json')
+serialized_input = File.read('public/leagues.json')
 input = JSON.parse(serialized_input)
 input_leagues = input['leagues']
 input_leagues.each do |league|
