@@ -1,8 +1,6 @@
 require 'json'
 
-json = 'leagues.json'
-
-serialized_input = File.read(json)
+serialized_input = File.read('../public/leagues.json')
 input = JSON.parse(serialized_input)
 input_leagues = input['leagues']
 input_leagues.each do |league|
@@ -25,4 +23,3 @@ input_leagues.each do |league|
     Team.create!(new_team)
   end
 end
-
