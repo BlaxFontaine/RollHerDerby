@@ -1,7 +1,7 @@
 class Api::V1::LeaguesController < ApplicationController
   def index
-    league = League.all.order(name: :asc)
-    render json: league
+    leagues = League.all.order(name: :asc)
+    render json: leagues
   end
 
   def create
